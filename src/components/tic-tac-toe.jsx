@@ -55,7 +55,7 @@ export const TicTacToe = () => {
             setPlayer("Yo, you both are losers!!! Match drawn!");
         }
         
-    });
+    }, [one, two, three, four, five, six, seven, eight, nine]);
 
     const handleChange = (value) => {
         if(count % 2 === 0) {
