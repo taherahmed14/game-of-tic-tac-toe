@@ -2,21 +2,27 @@ import { useEffect, useState } from "react";
 import { Players } from "./players";
 import "./tic-tac-toe.css";
 import "./resetBtn.css";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setOne, setTwo, setThree, setFour, setFive, setSix, setSeven, setEight, setNine, setReset } from "../features/action";
 
 export const TicTacToe = () => {
-    const [count, setCount] = useState(0);
-    const [one, setOne] = useState("");
-    const [two, setTwo] = useState("");
-    const [three, setThree] = useState("");
-    const [four, setFour] = useState("");
-    const [five, setFive] = useState("");
-    const [six, setSix] = useState("");
-    const [seven, setSeven] = useState("");
-    const [eight, setEight] = useState("");
-    const [nine, setNine] = useState("");
-
     const [result, setResult] = useState(false);
     const [player, setPlayer] = useState("");
+
+    const dispatch = useDispatch();
+    const { count, one, two, three, four, five, six, seven, eight, nine } = useSelector((state) => ({
+        count: state.count,
+        one: state.one,
+        two: state.two,
+        three: state.three,
+        four: state.four,
+        five: state.five,
+        six: state.six,
+        seven: state.seven,
+        eight: state.eight,
+        nine: state.nine
+    }));
 
     useEffect(() => {
         if(
@@ -57,58 +63,39 @@ export const TicTacToe = () => {
         
     }, [one, two, three, four, five, six, seven, eight, nine]);
 
-    const handleChange = (value) => {
-        if(count % 2 === 0) {
-            value("X");
-        }
-        else {
-            value("O");
-        }
-        setCount((p) => p+1);
-    }
-
     const handleClick = (box) => {
         if(box === "one" && one === "") {
-            handleChange(setOne);
+            dispatch(setOne());
         }
         else if(box === "two" && two === "") {
-            handleChange(setTwo);
+            dispatch(setTwo());
         }
         else if(box === "three" && three === "") {
-            handleChange(setThree);
+            dispatch(setThree());
         }
         else if(box === "four" && four === "") {
-            handleChange(setFour);
+            dispatch(setFour());
         }
         else if(box === "five" && five === "") {
-            handleChange(setFive);
+            dispatch(setFive());
         }
         else if(box === "six" && six === "") {
-            handleChange(setSix);
+            dispatch(setSix());
         }
         else if(box === "seven" && seven === "") {
-            handleChange(setSeven);
+            dispatch(setSeven());
         }
         else if(box === "eight" && eight === "") {
-            handleChange(setEight);
+            dispatch(setEight());
         }
         else if(box === "nine" && nine === "") {
-            handleChange(setNine);
+            dispatch(setNine());
         }
     };
 
     const handleReset = () => {
-        setOne("");
-        setTwo("");
-        setThree("");
-        setFour("");
-        setFive("");
-        setSix("");
-        setSeven("");
-        setEight("");
-        setNine("");
-        setCount(0);
         setResult(false);
+        dispatch(setReset());
     }
 
     return (
@@ -118,7 +105,7 @@ export const TicTacToe = () => {
             <div id="gameContainer">
                 {result ? <div id="resultDetail">{player}</div> :
                 <div id="gameOption">
-                    <div id="boxOne" onClick={() => handleClick("one")}>{one}</div>
+                    <div onClick={() => handleClick("one")}>{one}</div>
                     <div onClick={() => handleClick("two")}>{two}</div>
                     <div onClick={() => handleClick("three")}>{three}</div>
                     <div onClick={() => handleClick("four")}>{four}</div>

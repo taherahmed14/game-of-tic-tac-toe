@@ -51,9 +51,11 @@ body {
     width: 90px;
     padding: 30px;
     font-size: 60px;
-    border: 1px solid #30CFD0;
+    border-left: 1px solid #30CFD0;
+    border-top: 1px solid #30CFD0;
+    border-bottom: 1px solid #30CFD0;
     border-radius: 10px;
-    box-shadow: 0 0 1.5px 1.5px rgb(68, 67, 67);
+    box-shadow: 0 2px 0 2px rgb(22, 22, 22);
     cursor: pointer;
     background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     -webkit-background-clip: text;
