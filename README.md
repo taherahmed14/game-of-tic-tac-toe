@@ -3,10 +3,8 @@
 <table>
 <tr>
 <td>
-Tic-Tac-Toe game developed using React and Redux where 2 users can play and get to know the final winner.
+    Tic-Tac-Toe game developed using React and Redux where 2 users can play and get to know the final winner.
 </td>
-</tr>
-<tr>
 </tr>
 </table>
 
