@@ -14,7 +14,7 @@ Tic-Tac-Toe game developed using React and Redux where 2 users can play and get 
 
 ### Home Page
 
-![](https://github.com/m-sehrawat/Adidas-Website-Clone/blob/main/Adidas%20Clone%20Screen%20Shots/Home%20page.png?raw=true)
+![](https://github.com/taherahmed14/game-of-tic-tac-toe/blob/master/screenshot/game.png)
 
 
 ## Built with 
