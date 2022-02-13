@@ -1,0 +1,17 @@
+#players {
+    margin-top: 50%;
+}
+
+.inactive, .active {
+    height: 70px;
+    font-size: 50px;
+    font-weight: 800;
+    padding: 20px;
+    background: linear-gradient(to right, #FDC639 0%, #FF7C60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.active {
+    border-left: 5px solid #30CFD0;
+}

@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+}
+
+#container {
+    display: flex;
+}
+
+#logo {
+    /* height: 60px; */
+    width: 400px;
+    display: block;
+    margin-left: 0px;
+    text-align: left;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+    background: linear-gradient(to right, #FDC639 0%, #FF7C60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid #30CFD0;
+}
+
+#gameContainer {
+    width: 1000px;
+    height: 680px;
+}
+
+#resultDetail {
+    margin-top: 25%;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#gameOption {
+    width: 500px;
+    height: 500px;
+    margin: 90px 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    grid-gap: 3%;
+}
+
+#gameOption > div {
+    height: 90px;
+    width: 90px;
+    padding: 30px;
+    font-size: 60px;
+    border: 1px solid #30CFD0;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5px 1.5px rgb(68, 67, 67);
+    cursor: pointer;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#gameDetails {
+    margin-left: -100px;
+}
+
+#copyright {
+    color: white;
+}
