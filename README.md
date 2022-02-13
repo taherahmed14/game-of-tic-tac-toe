@@ -10,7 +10,7 @@
 
 
 
-### Home Page
+### Game Page
 
 ![](https://github.com/taherahmed14/game-of-tic-tac-toe/blob/master/screenshot/game.png)
 
